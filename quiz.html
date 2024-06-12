@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta name="viewport" content="width=device-width">
+  <link href="style quiz.css" rel="stylesheet" type="text/css" />
+  <script src="quiz.js"></script>
+
+  
+<header> 
+  <div class="w3-container">
+    <p style="display:inline-block;">
+      <h3>ASF Environmental Help Center <img src = "assets/Screenshot 2023-06-26 180900.png" alt = "logo" width = 5% height = 5%> <span style="float:right;">
+        <a href="quiz.html">
+          <button class= "quizbutton"><b1>TAKE THE DIAGNOSTIC QUIZ TODAY!</b1></button>
+        </a>
+    </span> </h3>
+      
+    </p>
+  </div>
+  <div class= "headerbuttons">
+    <a href="index.html">  
+      <button class= "headerbutton"><b>HOME</b></button>
+    </a>
+    <a href="quiz.html">
+      <button class= "headerbutton"><b>QUIZ</b></button>
+    </a>
+    <a href="resources.html">
+      <button class= "headerbutton"><b>RESOURCES</b></button>
+    </a>
+    <a href="about-us.html">
+      <button class="headerbutton"><b>ABOUT US</b></button>
+    </a>
+  </div>
+</header>
+
+<body onload="NextQuestion(0)">
+    <main>
+      <h4>Sustainability Diagnostic Quiz: </h4>
+        <!-- creating a modal for when quiz ends -->
+        <div class="modal-container" id="score-modal">
+          
+            <div class="modal-content-container">
+              
+                <br><h1>Congratulations, Diagnostic Quiz Completed.</h1>
+              
+                <div class="grade-details">
+                    <d1>Attempts : 10</d1>
+                    <p>Your Sustainability Score : <span id="grade-percentage"></span>%</p>
+                    <p ><i><span id="remarks"></span></i></p>
+                    <d1>Wrong Answers : <span id="wrong-answers"></span></d1>
+                    <d1>Right Answers : <span id="right-answers"></span></d1>
+                   
+                </div>
+                    
+                <div class="modal-button-container">
+                    <a href="resources.html"><button onclick="closeScoreModal()">Resources</button></a>
+                </div>
+              
+                <div class="modal-button-container">
+                    <button onclick="closeScoreModal()">Retake the Quiz</button>
+                </div>
+              
+              
+            </div>
+        </div>
+
+        <div class="game-quiz-container">
+          
+            <div class="game-details-container">
+                <h2>Score : <span id="player-score"></span> / 10</h2>
+                <h1> Question : <span id="question-number"></span> / 10</h1>
+            </div>
+
+            <div class="game-question-container">
+                <h1 id="display-question"></h1>
+            </div>
+
+            <div class="game-options-container">
+              
+               <div class="modal-container" id="option-modal">
+                 
+                    <div class="modal-content-container">
+                         <h1>Please Pick An Option</h1>
+                      
+                         <div class="modal-button-container">
+                            <button onclick="closeOptionModal()">Continue</button>
+                        </div>
+                      
+                    </div>
+                 
+               </div>
+              
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+              
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+              
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+              
+
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+
+
+            </div>
+
+            <div class="next-button-container">
+                <button onclick="handleNextQuestion()">Next Question</button>
+            </div>
+
+        </div>
+      <h5><b>NOTE: There are no wrong answers!</b></h5>
+    </main>
+    <script src="index.js"></script>
+</body>

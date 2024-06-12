@@ -1,0 +1,257 @@
+/* https://www.figma.com/file/zHnnjcGiUZZvcfLq2F2ggV/Final-Project-(kwk)?type=design&node-id=0-1&mode=design&t=U2nxPPuM0awd8x8c-0 */
+
+html { 
+  background: url("https://images.unsplash.com/photo-1619423089884-bc5b70bc4e2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")no-repeat center center fixed;
+   background-size: cover; 
+}
+.headerbuttons{
+  display: flex;
+  justify-content: space-around;
+}
+.headerbutton{
+  background-color: #7F9481;
+  border: 3px solid #7F9481;
+  border-radius: 5px;
+  color: #384939;
+  font-size: 20px;
+  margin: 0px; 
+}
+
+
+/* mouse over link */
+.headerbutton:hover {
+  color: #D6E2CE;
+}
+
+/* active link */
+.headerbutton:active {
+  color: #D6E2CE;
+}
+
+/* visited link */
+.headerbutton:visited {
+  color: #D6E2CE;
+}
+
+.quizbutton{
+  background-color:#D6E2CE;
+  border: 3px solid #D6E2CE;
+  border-radius: 18px;
+  color: #57674F;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.quizbutton:hover {
+  background-color: #e8eae6;
+  border: 3px solid #e8eae6;
+}
+
+header{
+  background-color: #7F9481; 
+  border: 3px solid #7F9481; 
+  width:100%; 
+  margin: 0px auto; 
+  padding: 0;
+  
+}
+
+body, head, h1 {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0em;
+} 
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #D6E2CE;
+  font-size: 36px;
+}
+
+.container1-home {
+  color: #D6E2CE;
+  font-family:'Cormorant Garamond', serif;
+  font-size: 54px;
+  background-color:#384939;
+  width: 100%;
+  justify-content: center;
+  margin: 0px;
+  padding:60px;
+}
+
+.container2-home {
+  color: #57674F;
+  font-family:'Cormorant Garamond', serif;
+  font-size: 48px;
+  background-color:#C6CFC2;
+  width: 100%;
+  justify-content: center;
+  padding:48px;
+  padding-bottom:100px;
+  position: relative;
+}
+
+.container3-home {
+  color: #E3ECDF;
+  font-family:'Cormorant Garamond', serif;
+  font-size: 48px;
+  background-color:#7F9481;
+  width: 100%;
+  justify-content: center;
+  padding:48px;
+  padding-bottom:100px;
+  position: relative; 
+  text-align: right; 
+}
+
+
+b1 {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+/*font-family: 'Oxygen', system-ui;*/
+font-family: 'Josefin Sans', sans-serif;
+font-size: 20px;
+}
+
+.container-center {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  background-color: rgba(195, 202, 196, .8);
+  font-size: 30px;
+  color: #384939;
+  padding: 50px;
+}
+
+
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.image-overlay {
+  position: relative;
+  width: 50%;
+  z-index: 9;
+  margin-left:0px;
+}
+
+/* Make the image to responsive */
+.image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start; 
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: #C3CAC4;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.image-overlay:hover .overlay {
+  opacity: 1;
+}
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 0px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  margin-top: 75px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.captiontext {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
